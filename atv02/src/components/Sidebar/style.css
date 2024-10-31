@@ -1,0 +1,55 @@
+@import "../../style/variaveis.css";
+
+.sidebar{
+    width: 10rem;
+    height: calc(100vh - 2rem);
+    position: fixed;
+    margin: 1rem;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+}
+
+.sidebar-header{
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content:center;
+    gap: 1rem;
+}
+
+.sidebar-header img{
+    width: 5rem;
+    height: 5rem;
+}
+
+.icon{
+    font-size: 1.5rem;
+}
+
+.icon .icon-func{
+    font-size: 1.7rem;
+}
+
+.sidebar-header .toggler{
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.sidebar-nav .nav-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0 1.1rem;
+}
+
+.sidebar-nav .nav-link{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+
+.sidebar-nav .nav-link:hover{
+    background-color: var(--light-blue) ;
+}

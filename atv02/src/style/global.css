@@ -1,0 +1,28 @@
+/* Estilos globais */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #F8F9FA;
+    font-family: "Inter", sans-serif;
+}
+
+.content {
+    display: flex;
+}
+
+/* .main-content {
+    margin-left: calc(5% + 2%);
+    padding: 2rem;
+    width: 100%;
+    transition: margin-left 0.3s;
+} */
+
+/* .sidebar.active ~ .main-content {
+    margin-left: calc(15% + 2%);
+} */
