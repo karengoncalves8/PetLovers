@@ -1,38 +1,52 @@
 @import "../../style/variaveis.css";
 
 .sidebar{
-    width: 10rem;
+    width: 12rem;
     height: calc(100vh - 2rem);
     position: fixed;
     margin: 1rem;
     border-radius: 8px;
     background-color: rgb(255, 255, 255);
+    padding: 2rem 1rem;
+    color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.4s ease;
+    -webkit-box-shadow: 0px 4px 8px 2px rgba(219,219,219,1);
+    -moz-box-shadow: 0px 4px 8px 2px rgba(219,219,219,1);
+    box-shadow: 0px 4px 8px 2px rgba(219,219,219,1);
 }
 
 .sidebar-header{
     display: flex;
-    padding: 1rem;
     align-items: center;
-    justify-content:center;
-    gap: 1rem;
+    justify-content:space-between;
+    padding-bottom: 3rem;
 }
 
 .sidebar-header img{
     width: 5rem;
     height: 5rem;
+    margin-left: 2rem;
+    transition: 0.4s ease;
 }
 
-.icon{
-    font-size: 1.5rem;
-}
-
-.icon .icon-func{
-    font-size: 1.7rem;
-}
-
-.sidebar-header .toggler{
+.sidebar-header .toggler-icon{
     cursor: pointer;
     transition: 0.3s ease;
+    color: var(--blue);
+}
+
+.sidebar-header .toggler-icon:hover{
+    transform: scale(1.2);
+}
+
+nav.sidebar-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 2;
 }
 
 .sidebar-nav .nav-list{
@@ -40,7 +54,23 @@
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
-    padding: 0 1.1rem;
+}
+
+.sidebar-nav .nav-item{
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--gray);
+}
+
+.sidebar-nav .nav-item.active{
+    background-color: var(--light-blue);
+}
+
+.sidebar-nav .nav-item.active .icon, .sidebar-nav .nav-item.active{
+    color: var(--blue);
 }
 
 .sidebar-nav .nav-link{
@@ -49,7 +79,57 @@
     gap: 0.8rem;
 }
 
-
-.sidebar-nav .nav-link:hover{
+.sidebar-nav .nav-item:hover, .sidebar-nav .nav-item:hover .icon{
     background-color: var(--light-blue) ;
+    color: var(--blue);
+    cursor: pointer;
+}
+
+.sidebar-nav .nav-item.active:hover, .sidebar-nav .nav-item.active:hover .icon{
+    color: white;
+}
+
+.icon{
+    font-size: 1.5rem;
+    color: var(--gray);
+}
+
+.sidebar-nav .nav-item.logout, .nav-item.logout .icon {
+    color: var(--light-red);
+}
+
+.sidebar-nav .nav-item.logout:hover, .nav-item.logout:hover .icon{
+    color: var(--light-red);
+    background-color: transparent;
+    transform: scale(1.02);
+}
+
+.sidebar.collapsed{
+    width: 5rem;
+}
+
+.sidebar-nav .nav-link .nav-label{
+    transition: opacity 0.4s ease;
+}
+
+.sidebar.collapsed .sidebar-nav .nav-link span.nav-label{
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+}
+
+.sidebar.collapsed .sidebar-nav .nav-link{
+    justify-content: center;
+    gap: 0;
+}
+
+.sidebar.collapsed .sidebar-header{
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar.collapsed .sidebar-header img{
+    width: 3rem;
+    height: 3rem;
+    margin-left: 0;
 }
