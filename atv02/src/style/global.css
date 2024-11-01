@@ -14,12 +14,15 @@ body {
 
 .content {
     display: flex;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .main-content {
     margin-left: calc(13rem + 1rem);
     padding: 3rem 2rem;
-    width: 100%;
+    width:100vw;
+    overflow: hidden;
     transition: margin-left 0.3s;
 } 
 
